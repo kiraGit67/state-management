@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>ToDo App</h1>
+    </header>
+    <main>
+        <section id="adding-section">
+            <!-- benötigte Elemente für die ToDo App -->
+            <form action="" method="GET" id="add-toDo-form">
+                <input type="text" id="new-toDo-input" placeholder="Get sh*t done!">
+                <button id="add-new-toDo">Add ToDo</button>
+            </form>
+        </section>
+        <section id="filter-section">
+            <header class="section-header">
+                <h2>Filter & Options</h2>
+            </header>
+            <div id="options">
+                <div>
+                    <input type="radio" name="filter" id="all" value="all" class="custom-button" />
+                    <label for="all"><span>All</span></label>
+                </div>
+                <div>
+                    <input type="radio" name="filter" id="open" value="open" class="custom-button" />
+                    <label for="open"><span>Open</span></label>
+                </div>
+                <div>
+                    <input type="radio" name="filter" id="done" value="done" class="custom-button" />
+                    <label for="done"><span>Done</span></label>
+                </div>
+                <button id="remove-done-toDos">Remove Done ToDos</button>
+            </div>
+        </section>
+        <section id="list-section">
+            <header class="section-header">
+                <h2>Your ToDo's</h2>
+            </header>
+            <ul id="toDoList">
+                <!--
+                <li><input type="checkbox">Learn HTML</li>
+                -->
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
