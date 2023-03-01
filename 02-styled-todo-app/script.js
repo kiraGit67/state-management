@@ -13,8 +13,22 @@ if (Array.isArray(toDosFromLocalStorageToObject)) {
   toDoState.toDos = toDosFromLocalStorageToObject;
 }
 
+const filterLocalStorage = JSON.parse(localStorage.getItem("filter"));
+console.log(filterLocalStorage);
+
+if (filterLocalStorage !== "") {
+  toDoState.filter = filterLocalStorage;
+  const filterButtons = document.querySelectorAll("input[type='radio']");
+  filterButtons.forEach((filterButton) => {
+    if (filterButton.value === filterLocalStorage) {
+      filterButton.checked = true;
+    }
+  });
+}
+
 // toDos aktualisieren
 function updateLocalStorage() {
+  localStorage.setItem("filter", JSON.stringify(toDoState.filter));
   localStorage.setItem("toDos", JSON.stringify(toDoState.toDos));
 }
 
@@ -94,6 +108,7 @@ filterButtons.forEach((filterButton) => {
   filterButton.addEventListener("change", function (e) {
     toDoState.filter = e.target.value;
     console.log(toDoState.filter);
+    updateLocalStorage();
     render();
   });
 });
