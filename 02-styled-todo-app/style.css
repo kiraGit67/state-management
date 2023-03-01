@@ -1,0 +1,127 @@
+html,
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  padding: 3.5rem 1.5rem;
+  background-color: palevioletred;
+}
+
+.main-header h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 3px 3px 0px steelblue;
+}
+
+section {
+  padding: 1.75rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+main {
+  background-color: whitesmoke;
+  padding: 2.5rem 3.5rem;
+}
+
+#add-toDo-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.custom-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 100%;
+  accent-color: steelblue;
+}
+
+.custom-button:checked {
+  background-color: steelblue;
+}
+
+button,
+#new-toDo-input {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+#new-toDo-input:focus,
+button:focus {
+  outline: 2px solid goldenrod;
+}
+
+button {
+  background-color: steelblue;
+  color: white;
+  box-shadow: 3px 3px 0px palevioletred;
+}
+
+#remove-done-toDos {
+  margin-top: 1rem;
+  width: 50%;
+  min-width: 20rem;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  border: 2px solid black;
+  border-radius: 0.15rem;
+}
+
+input[type="checkbox"]:checked {
+  background-color: seagreen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' focusable='false' %3E%3Cpath fill='none' stroke='white' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /%3E%3C/svg%3E");
+}
+
+#toDoList {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Styling for ToDos */
+.toDo-item {
+  padding: 1rem 1.25rem;
+  background-color: white;
+  color: black;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.toDoDone {
+  text-decoration: line-through;
+  border: 2px solid goldenrod;
+  box-shadow: 2px 2px 0px palevioletred;
+}
