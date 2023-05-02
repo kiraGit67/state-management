@@ -4,11 +4,11 @@
 const button = document.querySelector("button");
 
 const data = {
-  lightOn: false,
+  lightOn: true,
   buttonText: ["Licht An", "Licht Aus"],
 };
 
-button.innerText = data.buttonText[0];
+button.innerText = data.buttonText[1];
 
 // Text Toggeln zwischen "Licht an" und "Licht aus"
 button.addEventListener("click", () => {
@@ -17,7 +17,9 @@ button.addEventListener("click", () => {
 
   if (data.lightOn) {
     button.innerText = data.buttonText[1];
+    document.body.classList.remove("dark");
   } else {
     button.innerText = data.buttonText[0];
+    document.body.classList.add("dark");
   }
 });
