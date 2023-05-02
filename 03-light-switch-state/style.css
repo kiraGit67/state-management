@@ -1,0 +1,43 @@
+:root {
+  font-size: 24px;
+}
+
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: snow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: 5px solid black;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.dark {
+  background-color: black;
+}
+
+.dark > button {
+  background-color: black;
+  border-color: white;
+  color: white;
+  box-shadow: 0 0 35px white;
+}
